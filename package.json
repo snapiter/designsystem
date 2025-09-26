@@ -1,6 +1,6 @@
 {
   "name": "@snapiter/designsystem",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,10 @@
   ],
   "scripts": {
     "build": "tsc && npx @tailwindcss/cli -i ./src/design-system.css -o ./dist/design-system.css && cp -r src/layout/logo/logo.svg dist/layout/logo/logo.svg",
-    "build:publish": "npm run build && npm publish --access public"
+    "build:publish": "npm run build && npm run version:patch && npm publish --access public",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version"
   },
   "peerDependencies": {
     "react": "^19.1.1",
