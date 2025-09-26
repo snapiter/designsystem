@@ -1,6 +1,6 @@
 {
   "name": "@snapiter/designsystem",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && npx @tailwindcss/cli -i ./src/design-system.css -o ./dist/design-system.css"
+    "build": "tsc && npx @tailwindcss/cli -i ./src/design-system.css -o ./dist/design-system.css && cp -r src/assets/ dist/assets/"
   },
   "peerDependencies": {
     "react": "^19.1.1",
