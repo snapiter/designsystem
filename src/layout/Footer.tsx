@@ -6,6 +6,7 @@ export default function Footer({ withMenu = true }: { withMenu?: boolean }) {
         <footer className="bg-surface text-foreground py-6 px-4 border-t border-border">
             <div className="container mx-auto max-w-7xl">
                 {withMenu && (
+                  <div className="border-b border-border mb-8">
                     <div className="grid md:grid-cols-4 gap-8 mb-8">
                         <div>
                             <div className="flex items-center gap-3 mb-4">
@@ -42,10 +43,9 @@ export default function Footer({ withMenu = true }: { withMenu?: boolean }) {
                 </ul>
                     </div> */}
                     </div>
-
+                </div>
                 )}
 
-                <div className="border-t border-border pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-muted text-sm">
                             © {year}&nbsp;
@@ -78,7 +78,6 @@ export default function Footer({ withMenu = true }: { withMenu?: boolean }) {
                             </a>
                         </div>
                     </div>
-                </div>
             </div>
         </footer>
     );
