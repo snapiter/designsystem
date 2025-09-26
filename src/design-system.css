@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        /* Core Colors */
+        --primary: #F46036;
+        --primary-hover: #d54829;
+        --primary-light: #f7845c;
+        --primary-dark: #c53a2a;
+
+        /* Semantic Colors */
+        --background: #ffffff;
+        --foreground: #171717;
+        --surface: #f8f9fa;
+        --border: #e5e7eb;
+        --muted: #6b7280;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --error: #ef4444;
+    }
+
+    @theme inline {
+        /* Map CSS variables to Tailwind color utilities */
+        --color-primary: var(--primary);
+        --color-primary-hover: var(--primary-hover);
+        --color-primary-light: var(--primary-light);
+        --color-primary-dark: var(--primary-dark);
+
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-surface: var(--surface);
+        --color-border: var(--border);
+        --color-muted: var(--muted);
+        --color-success: var(--success);
+        --color-warning: var(--warning);
+        --color-error: var(--error);
+
+        --font-sans: var(--font-geist-sans);
+        --font-mono: var(--font-geist-mono);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --background: #0a0a0a;
+            --foreground: #ededed;
+            --surface: #1a1a1a;
+            --border: #374151;
+        }
+    }
+}
+
+
+/* Then your component styles */
+@layer components {
+    .button-primary {
+        @apply bg-[var(--color-primary)] text-[var(--color-foreground)] font-semibold rounded-md px-4 py-2 transition-colors duration-200 cursor-pointer;
+    }
+
+    .button-primary:hover {
+        @apply bg-[var(--primary-hover)];
+    }
+
+    .button-primary:disabled {
+        @apply opacity-70 cursor-not-allowed;
+    }
+}
+@layer utilities {
+  /* Background colors */
+  .bg-primary         { background-color: var(--primary); }
+  .bg-primary-hover   { background-color: var(--primary-hover); }
+  .bg-primary-light   { background-color: var(--primary-light); }
+  .bg-primary-dark    { background-color: var(--primary-dark); }
+
+  .bg-background      { background-color: var(--background); }
+  .bg-foreground      { background-color: var(--foreground); }
+  .bg-surface         { background-color: var(--surface); }
+  .bg-border          { background-color: var(--border); }
+  .bg-muted           { background-color: var(--muted); }
+  .bg-success         { background-color: var(--success); }
+  .bg-warning         { background-color: var(--warning); }
+  .bg-error           { background-color: var(--error); }
+
+  /* Text colors */
+  .text-primary       { color: var(--primary); }
+  .text-primary-hover { color: var(--primary-hover); }
+  .text-primary-light { color: var(--primary-light); }
+  .text-primary-dark  { color: var(--primary-dark); }
+
+  .text-background    { color: var(--background); }
+  .text-foreground    { color: var(--foreground); }
+  .text-surface       { color: var(--surface); }
+  .text-border        { color: var(--border); }
+  .text-muted         { color: var(--muted); }
+  .text-success       { color: var(--success); }
+  .text-warning       { color: var(--warning); }
+  .text-error         { color: var(--error); }
+
+  /* Border colors */
+  .border-primary       { border-color: var(--primary); }
+  .border-primary-hover { border-color: var(--primary-hover); }
+  .border-primary-light { border-color: var(--primary-light); }
+  .border-primary-dark  { border-color: var(--primary-dark); }
+
+  .border-background    { border-color: var(--background); }
+  .border-foreground    { border-color: var(--foreground); }
+  .border-surface       { border-color: var(--surface); }
+  .border-border        { border-color: var(--border); }
+  .border-muted         { border-color: var(--muted); }
+  .border-success       { border-color: var(--success); }
+  .border-warning       { border-color: var(--warning); }
+  .border-error         { border-color: var(--error); }
+}
