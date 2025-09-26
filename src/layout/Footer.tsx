@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa6";
+import Logo from "./logo/Logo";
 
 export default function Footer({ withMenu = true }: { withMenu?: boolean }) {
     const year = new Date().getFullYear();
@@ -9,12 +10,8 @@ export default function Footer({ withMenu = true }: { withMenu?: boolean }) {
                   <div className="border-b border-border mb-8">
                     <div className="grid md:grid-cols-4 gap-8 mb-8">
                         <div>
-                            <div className="flex items-center gap-3 mb-4">
-                                <img src="/logo.svg" alt="SnapIter Logo" width="30" height="30" />
-                                <span className="text-xl font-bold">SnapIter</span>
-                            </div>
-                            <p className="text-muted text-sm">Snap, Track, Expore.
-                            </p>
+                            <Logo size="sm" />
+                            <p className="text-muted text-sm">Snap, Track, Explore.</p>
                         </div>
 
                         {/* <div>
