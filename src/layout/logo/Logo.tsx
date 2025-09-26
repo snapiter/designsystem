@@ -1,3 +1,5 @@
+import logoUrl from "./logo.svg"; 
+
 type LogoSize = "sm" | "md" | "lg";
 
 const sizeMap: Record<LogoSize, { w: number; h: number; className: string }> = {
@@ -20,7 +22,7 @@ export default function Logo({
   return (
     <div className="flex items-center">
       <img
-        src="@snapiter/designsystem/assets/logo.svg"
+        src={logoUrl}
         alt="SnapIter Logo"
         width={w}
         height={h}
