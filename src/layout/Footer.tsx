@@ -10,7 +10,7 @@ export default function Footer({ withMenu = true }: { withMenu?: boolean }) {
                   <div className="border-b border-border mb-8">
                     <div className="grid md:grid-cols-4 gap-8 mb-8">
                         <div>
-                            <Logo size="sm" />
+                            <Logo size="md" showTitle={true} />
                             <p className="text-muted text-sm">Snap, Track, Explore.</p>
                         </div>
 

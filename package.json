@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc && npx @tailwindcss/cli -i ./src/design-system.css -o ./dist/design-system.css && cp -r src/layout/logo/logo.svg dist/layout/logo/logo.svg",
-    "publish": "npm publish --access public"
+    "build:publish": "npm run build && npm publish --access public"
   },
   "peerDependencies": {
     "react": "^19.1.1",
