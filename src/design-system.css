@@ -50,7 +50,6 @@
 }
 
 
-/* Then your component styles */
 @layer components {
     .button-primary {
         @apply bg-[var(--color-primary)] text-[var(--color-foreground)] font-semibold rounded-md px-4 py-2 transition-colors duration-200 cursor-pointer;
@@ -63,7 +62,34 @@
     .button-primary:disabled {
         @apply opacity-70 cursor-not-allowed;
     }
+
+
+    .button-secondary {
+        @apply bg-surface text-foreground border border-transparent font-semibold rounded-md p-2  cursor-pointer;
+    }
+    
+    .button-secondary:hover {
+        @apply bg-surface/80 border border-border;
+    }
+    
+    .button-secondary:disabled {
+        @apply opacity-70 cursor-not-allowed;
+    }
+
+    .button-outline {
+        @apply text-foreground border border-border font-semibold rounded-md p-2  cursor-pointer;
+    }
+    
+    .button-outline:hover {
+        @apply bg-surface/80 border border-border;
+    }
+
+    .button-outline:disabled {
+        @apply opacity-70 cursor-not-allowed;
+    }
 }
+
+
 @layer utilities {
   /* Background colors */
   .bg-primary         { background-color: var(--primary); }
