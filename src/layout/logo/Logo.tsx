@@ -1,11 +1,14 @@
-import logoUrl from "./logo.svg"; 
+import logoUrl from "./logo.svg";
 
 type LogoSize = "sm" | "md" | "lg";
 
-const sizeMap: Record<LogoSize, { w: number; h: number; className: string }> = {
-  sm: { w: 24, h: 24, className: "w-6 h-6" },
-  md: { w: 32, h: 32, className: "w-8 h-8" },
-  lg: { w: 40, h: 40, className: "w-10 h-10" },
+const sizeMap: Record<
+  LogoSize,
+  { w: number; h: number; className: string; titleClassName: string }
+> = {
+  sm: { w: 24, h: 24, className: "w-6 h-6", titleClassName: "text-base" },
+  md: { w: 32, h: 32, className: "w-8 h-8", titleClassName: "text-xl" },
+  lg: { w: 40, h: 40, className: "w-10 h-10", titleClassName: "text-2xl" },
 };
 
 export default function Logo({
@@ -17,10 +20,10 @@ export default function Logo({
   showTitle?: boolean;
   title?: string;
 }) {
-  const { w, h, className } = sizeMap[size];
+  const { w, h, className, titleClassName } = sizeMap[size];
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center gap-2">
       <img
         src={logoUrl}
         alt="SnapIter Logo"
@@ -29,7 +32,7 @@ export default function Logo({
         className={className}
       />
       {showTitle && (
-        <h1 className="text-2xl font-bold text-foreground">
+        <h1 className={`${titleClassName} font-bold text-foreground`}>
           {title ?? (
             <>
               <span className="text-primary">S</span>nap
