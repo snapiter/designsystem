@@ -1,6 +1,6 @@
 import logoUrl from "./logo.svg";
 
-type LogoSize = "sm" | "md" | "lg";
+type LogoSize = "sm" | "md" | "lg" | "xl" | "xxl";
 
 const sizeMap: Record<
   LogoSize,
@@ -9,6 +9,8 @@ const sizeMap: Record<
   sm: { w: 24, h: 24, className: "w-6 h-6", titleClassName: "text-base" },
   md: { w: 32, h: 32, className: "w-8 h-8", titleClassName: "text-xl" },
   lg: { w: 40, h: 40, className: "w-10 h-10", titleClassName: "text-2xl" },
+  xl: { w: 48, h: 48, className: "w-12 h-12", titleClassName: "text-3xl" },
+  xxl: { w: 64, h: 64, className: "w-16 h-16", titleClassName: "text-4xl" },
 };
 
 export default function Logo({
