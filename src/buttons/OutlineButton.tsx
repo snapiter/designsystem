@@ -1,5 +1,5 @@
-import BaseButton, { ButtonProps } from "./BaseButton";
+import BaseButton, { PublicButtonProps } from "./BaseButton";
 
-export default function OutlineButton(props: ButtonProps) {
+export default function OutlineButton(props: PublicButtonProps) {
   return <BaseButton {...props} variant="outline" />;
 }

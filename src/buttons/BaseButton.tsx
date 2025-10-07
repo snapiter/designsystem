@@ -7,15 +7,18 @@ type BaseProps = {
     icon?: ReactNode;
     disabled?: boolean;
     onClick?: () => void;
-};
-
-export type ButtonProps = BaseProps &
-  (
-    | (ButtonHTMLAttributes<HTMLButtonElement> & { href?: undefined })
-    | (AnchorHTMLAttributes<HTMLAnchorElement> & { href: string })
-  ) & {
-    variant: "primary" | "secondary" | "outline";
   };
+  
+  type ButtonProps =
+    | (ButtonHTMLAttributes<HTMLButtonElement> & { href?: undefined })
+    | (AnchorHTMLAttributes<HTMLAnchorElement> & { href?: string });
+  
+  export type VariantButtonProps = BaseProps &
+  ButtonProps & {
+      variant: "primary" | "secondary" | "outline";
+    };
+  
+export type PublicButtonProps = BaseProps & ButtonProps;
 
 export default function BaseButton({
   text,
@@ -25,7 +28,7 @@ export default function BaseButton({
   href,
   variant,
   ...props
-}: ButtonProps) {
+}: VariantButtonProps) {
   if (!text && !icon) {
     throw new Error("Button must have either text or icon");
   }
