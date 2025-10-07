@@ -49,6 +49,23 @@
     }
 }
 
+@layer base {
+    /* Normalize buttons and links with these classes */
+    a.button-primary,
+    button.button-primary,
+    a.button-secondary,
+    button.button-secondary,
+    a.button-outline,
+    button.button-outline {
+      @apply inline-flex items-center justify-center no-underline appearance-none select-none gap-2;
+    }
+    button.button-primary,
+    button.button-secondary,
+    button.button-outline {
+      @apply text-left;
+    }
+  }
+  
 
 @layer components {
     .button-primary {
