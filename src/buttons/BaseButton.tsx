@@ -15,7 +15,7 @@ type BaseProps = {
   
   export type VariantButtonProps = BaseProps &
   ButtonProps & {
-      variant: "primary" | "secondary" | "outline";
+      variant: "primary" | "secondary" | "tertiary" | "outline";
     };
   
 export type PublicButtonProps = BaseProps & ButtonProps;

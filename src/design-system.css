@@ -55,17 +55,20 @@
     button.button-primary,
     a.button-secondary,
     button.button-secondary,
+    a.button-tertiary,
+    button.button-tertiary,
     a.button-outline,
     button.button-outline {
       @apply inline-flex items-center justify-center no-underline appearance-none select-none gap-2;
     }
     button.button-primary,
     button.button-secondary,
+    button.button-tertiary,
     button.button-outline {
       @apply text-left;
     }
   }
-  
+
 
 @layer components {
     .button-primary {
@@ -92,6 +95,18 @@
     .button-secondary:disabled {
         @apply opacity-70 cursor-not-allowed;
     }
+    .button-tertiary {
+        @apply text-[var(--color-foreground)] font-semibold rounded-md px-4 py-2 transition-colors duration-200 cursor-pointer;
+    }
+  
+    .button-tertiary:hover {
+        @apply bg-[var(--surface)];
+    }
+  
+    .button-tertiary:disabled {
+        @apply opacity-70 cursor-not-allowed;
+    }
+  
 
     .button-outline {
         @apply text-foreground border border-border font-semibold rounded-md p-2  cursor-pointer;
