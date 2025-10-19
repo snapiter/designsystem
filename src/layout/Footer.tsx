@@ -27,9 +27,8 @@ export default function Footer({ withMenu = true }: { withMenu?: boolean }) {
                         <div>
                             <h3 className="font-semibold mb-4">Resources</h3>
                             <ul className="space-y-2 text-muted">
-                                <li><a href="https://github.com/snapiter" className="hover:text-foreground transition-colors">GitHub</a></li>
-                                {/* <li><a href="#" className="hover:text-foreground transition-colors">Documentation</a></li> */}
-                                {/* <li><a href="#" className="hover:text-foreground transition-colors">Support</a></li> */}
+                                <li><a href="https://github.com/snapiter" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">GitHub</a></li>
+                                <li><a href="https://docs.snapiter.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Documentation</a></li>
                             </ul>
                         </div>
                         {/*           
